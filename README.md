@@ -1,2 +1,2 @@
-# help_teap
+# help teap
 Help Platforma Teap
