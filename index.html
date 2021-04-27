@@ -1,1 +1,342 @@
-<h1> Help Trading TEAP  </h1>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Holcim Energy Cost Simulation</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/font-awesome.min.css" >
+    <link rel="stylesheet" type="text/css"href="http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <!-- Stylesheet navbar -->
+    <link href="css/hoe.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/1.11.2.jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/hoe.js"></script>
+    <script src="js/calc.js"></script>
+
+    <!--Functie Java script pentru afisare text in partea dreapta-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.nav ul li:first').addClass('active');
+            $('.main-content:not(:first)').hide();
+            $('.nav ul li a').click(function (event) {
+                event.preventDefault();
+                var content = $(this).attr('href');
+                $(this).parent().addClass('active');
+                $(this).parent().siblings().removeClass('active');
+                $(content).show();
+                $(content).siblings('.main-content').hide();
+            });
+        });
+    </script>
+</head>
+
+<!--Continut site-->
+<body hoe-navigation-type="vertical" hoe-nav-placement="left" theme-layout="wide-layout" theme-bg="bg1" >
+    <div id="hoeapp-wrapper" class="hoe-hide-lpanel" hoe-device-type="desktop">
+        <header id="hoe-header" hoe-lpanel-effect="shrink">
+            <div class="hoe-left-header">
+                <a href="#"><i class="fa fa-graduation-cap"></i> <span>H.E.C.S.</span></a>
+                <span class="hoe-sidebar-toggle"><a href="#"></a></span>
+            </div>
+            <div class="hoe-right-header" hoe-position-type="relative" >
+                <span class="hoe-sidebar-toggle"><a href="#"></a></span>
+                <ul class="left-navbar"></ul> 	
+            </div>
+        </header>
+
+
+        <div id="hoeapp-container" hoe-color-type="lpanel-bg2" hoe-lpanel-effect="shrink" class="nav">
+            <aside id="hoe-left-panel" hoe-position-type="absolute">
+                <div class="profile-box">
+                    <div class="media">
+                        <a class="pull-left" href="www.holcim.ro">
+                            <img class="img-circle" src="images/digital.png">
+                        </a>
+                        <div class="media-body">
+                            <h5 class="media-heading">Holcim Romania</h5>
+                            <small>Holcim Energy Cost Simulator</small>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav panel-list nav navbar-nav col-sm-12">
+                    
+                    <li class="nav-level" >Navigation</li>
+                    <li class="active">
+                            <a href="#section-london">
+                                <i class="fa fa-tachometer"></i>
+                                <span class="menu-text">Start</span>
+                                <span class="selected"></span>
+                            </a>
+                    </li>
+                    <li>
+                            <a href="#section-paris">
+                                    <i class="fa fa-bar-chart"></i>
+                                    <span class="menu-text">Graphs</span>
+                                    <span class="selected"></span>
+                            </a>
+                        
+                    </li>
+                    <li class="hoe-has-menu">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-files-o"></i>
+                            <span class="menu-text">Other Pages</span>
+                            <span class="selected"></span>
+                        </a>
+                        <ul class="hoe-sub-menu">
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Blank Page</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Login</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">User Profile</span>
+                                    <span class="label sul">Updated</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Team Member</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Time Line</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hoe-has-menu">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="menu-text">Email</span>
+                            <span class="selected"></span>
+                        </a>
+                        <ul class="hoe-sub-menu">
+
+                            <li class="hoe-has-menu">
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text"> Platform </span>
+                                    <span class="selected"></span>
+                                </a>
+                                <ul class="hoe-sub-menu">
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span class="menu-text">Inbox v1</span>
+                                            <span class="selected"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span class="menu-text">Inbox v2</span>
+                                            <span class="selected"></span>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Detail</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Compose</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+							<li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Send</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+							<li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Draft</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-level">Components</li>
+                    <li class="hoe-has-menu">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-pencil-square-o"></i>
+                            <span class="menu-text">UI Elements</span>
+                            <span class="selected"></span>
+                        </a>
+                        <ul class="hoe-sub-menu">
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Icon</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Buttons</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Tabs & Panel</span>
+                                    <span class="label sul">Updated</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Notification</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Typography</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-table"></i>
+                            <span class="menu-text">Table</span> 
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li class="nav-level">Menu Lavel</li>
+                    <li class="hoe-has-menu">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-sitemap"></i>
+                            <span class="menu-text">Menu Lavel 1</span>
+                            <span class="selected"></span>
+                        </a>
+                        <ul class="hoe-sub-menu">
+							<li>
+                                <a href="javascript:void(0)">
+									<span class="menu-text">level 2</span>
+									<span class="selected"></span>
+                                </a>
+                            </li>
+							<li>
+                                <a href="javascript:void(0)">
+									<span class="menu-text">level 2</span>
+									<span class="selected"></span>
+                                </a>
+                            </li>
+                            <li class="hoe-has-menu">
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">level 2</span>
+                                    <span class="selected"></span>
+                                </a>
+                                <ul class="hoe-sub-menu">
+                                    <li class="hoe-has-menu">
+                                        <a href="javascript:void(0)">
+                                            <span class="menu-text">level 3</span>
+                                            <span class="selected"></span>
+                                        </a>
+                                        <ul class="hoe-sub-menu">
+                                            <li>
+                                                <a href="javascript:void(0)">
+                                                    <span class="menu-text">level 4</span>
+                                                    <span class="selected"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">
+                                                    <span class="menu-text">level 4</span>
+                                                    <span class="selected"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span class="menu-text">level 3</span>
+                                            <span class="selected"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span class="menu-text">level 3</span>
+                                            <span class="selected"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span class="menu-text">level 3</span>
+                                            <span class="selected"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>  
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+            <section id="main-content">
+				<div class="content-title">
+                    <h3 class="main-title">Sidebar Menu</h3>
+                    <span>Sidebar Features</span>
+                     <div id="section-london" class="main-content">
+                        <h2>London</h2>
+                        <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                    </div>
+                    <div id="section-paris" class="main-content">
+                        <h2>Paris</h2>
+                        <p>Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its picturesque 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. </p>
+                        <form name="formcalc">
+        
+                                <div class="col-2">
+                                  <label for="ex0">Temperatura [ºC]</label>
+                                  <input class="form-control" id="ex0" type="number" name="num0">
+                                  
+                                  <label for="ex0">Presiune [bar]</label>
+                                  <input class="form-control" id="ex0" type="number" name="num1">
+                                  
+                                  <label for="ex0">Entalpie [kJ/kg K]</label>
+                                  <input class="form-control" id="ex0" type="number" name="num2"> <br> <br>
+                                  
+                                  <button type="button" class="btn btn-primary" onclick="sumValues()">Calculate</button> <br> <br>
+                                  
+                                  <label for="ex0">Rezultat</label>
+                                  <input class="form-control" id="ex0" type="number" name="txtres">
+                                </div>
+                          </form>
+                    </div>
+                    
+                </div>
+                
+            </section>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
